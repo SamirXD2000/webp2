@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  wesbsiteclase:
+    image: webdevops/php-apache-dev
+    container_name: websiteclase
+    ports:
+      - 80:80
+    volumes:
+      - ./src:/app
+    networks:
+      default:
+        aliases:
+          - websiteclase
+
+networks:
+  default:
